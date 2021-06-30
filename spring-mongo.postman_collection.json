@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "a599e457-c36f-42c8-ae4e-efc2e562d155",
+		"name": "spring-mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/student/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/studentsByName/{name}  GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/student//studentsByName/world",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"",
+						"studentsByName",
+						"world"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete/{id} DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/student/delete/60dc6999e7670d5232d3c54e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"delete",
+						"60dc6999e7670d5232d3c54e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getById/{id} GET Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/student/getById/60dc649d302e883adf94e988",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"getById",
+						"60dc649d302e883adf94e988"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"world\",\r\n    \"email\": \"world@gmail.com\",\r\n    \"department\": {\r\n        \"departmentName\": \"world\",\r\n        \"location\": \"world\"\r\n    },\r\n    \"subjects\": [\r\n        {\r\n            \"subjectName\": \"world\",\r\n            \"marksObtained\": 70\r\n        },\r\n        {\r\n            \"subjectName\": \"world\",\r\n            \"marksObtained\": 80\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/student/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"60dc649d302e883adf94e988\",\r\n    \"name\": \"world update\",\r\n    \"email\": \"world@gmail.com update\",\r\n    \"department\": {\r\n        \"departmentName\": \"world update\",\r\n        \"location\": \"world update\"\r\n    },\r\n    \"subjects\": [\r\n        {\r\n            \"subjectName\": \"world update\",\r\n            \"marksObtained\": 80\r\n        },\r\n        {\r\n            \"subjectName\": \"world update\",\r\n            \"marksObtained\": 90\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/student/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
